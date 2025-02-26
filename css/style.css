@@ -1,0 +1,222 @@
+
+@import url('https://fonts.googleapis.com/css?family=Asap:300,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">');    
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i&display=swap" rel="stylesheet">');    
+
+*, *::before, *::after {box-sizing: border-box}
+
+    h1, h2 {
+        font-family: 'asap', sans-serif;
+        font-style: italic;
+        font-weight: 300i;
+        letter-spacing: 1px;
+		margin: 0;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+	    font-size: 2rem;
+    }
+
+     h3, h4, h4, h6, p,li {
+    	    font-family:'Roboto', sans-serif;
+            font-weight: 300;
+    }
+
+/* ------- Layout -------*/
+
+    /* ------- Header -------*/
+
+    header {
+	    border-bottom: 1px white solid;
+        background-color: #BBD3ED;
+        display: grid;
+        grid-area: header;
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+        grid-template-areas:"header header header header header";
+        justify-items: center;
+    }
+    
+    .name-short, .name-long{
+        display: grid;
+        align-items: center;
+        grid-column: 1 / 6;
+        font-weight: 600;
+        font-style: italic;
+        letter-spacing: 2px;
+    }
+
+    .name-long{
+        display:none;
+    }
+
+    /* ------- Body -------*/
+
+    body {
+        background-color: #ddd;
+	    margin: 0;
+	    display: grid;
+        grid-template-rows: 5.5em calc(95vh - 5.5em) auto;
+	    grid-template-rows: 5.5em calc(95svh - 5.5em) auto;
+	    grid-template-columns: 1fr 4fr 4fr 1fr;
+	    grid-template-areas:"header header header header"
+                      "hero hero hero hero"
+                      "footer footer footer footer";
+    }
+
+    /* ------- Hero -------*/
+
+    .hero {
+        grid-area: hero;
+        display: flex;
+        background-color: #BBD3ED;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-column: 1 / 6;
+
+    }
+
+    .circle{
+        display: block;
+        position: absolute;
+        padding: 30vmin;
+        border-radius: 50%;
+        filter: blur(6vmin);
+        border: none;
+        background-color: #FFF;
+    }
+
+    .logo {
+        fill: #000;
+        height: 30vmin;
+        z-index: 100;
+    }
+
+    /*
+    .hero::before, .hero::after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 70vmin;
+        width: 70vmin;
+        border: 2px solid black;
+        border-radius: 50%;
+    }    
+    .hero::before{
+        top: 10vh;
+        z-index: -10;
+    }
+    
+    .hero::after{
+        bottom: 10vh;
+        z-index: -10;
+    } 
+    */
+
+    /* ------- Footer -------*/
+
+    footer {
+        display: grid;
+        grid-area: footer;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        /* background-color: #212121;
+        background-color: rgb(0 0 0 / 80%); */
+        background-color: #ddd;
+    }
+
+    footer H2 {
+        padding: 1.25em .25em .5em;
+        /* font-size: 2.5rem;
+        font-size: clamp(2.5rem, 3.5rem, 4rem); */
+    }
+
+    .signature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: grid;
+        justify-content: space-around;
+        align-content: center;
+        justify-items: center;
+        padding-bottom: 1.25em;
+    }
+
+    .signatures {
+        font-size: 1.25rem;
+        display: block;
+        padding: 0.5em 0;
+    }
+
+    footer a:link, footer a:visited, footer a:active, footer a:hover {
+        text-decoration: none;
+        color:#000
+    }
+
+    /* ------- Test -------
+
+    header {background-color: blue;}
+    footer {background-color: chartreuse;}
+    body {background-color: aqua;}
+    .hero {background-color: crimson;}*/
+
+
+    @media (min-width: 40em) {
+
+        header {
+            justify-items: left;
+
+        }
+
+        .name-short{
+            display: none;
+        }
+    
+        .name-long{
+            display:grid;
+            grid-column: 2 / 4;
+        }
+
+        .circle{
+            padding: 30vmin;
+        }
+
+        .signature {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .signatures {
+            padding: 0.5em;
+        }
+
+        /* header {
+            display: grid;
+            grid-area: header;
+            grid-template-columns: 1fr 4fr 4fr 1fr;
+		    grid-template-areas:"header header header header header";
+            justify-items: stretch;
+        }
+
+        .hero .circle {
+            height: 50vmin;
+            width: 50vmin;
+            filter: blur(55px);
+        }
+
+        .logo {
+            width: 20vmin;
+        } */
+
+            /* ------- Test -------*/
+        /* body {background-color: #cf380e;} */
+    }
+
+    @media (min-width: 125em) {	
+
+
+
+            /* ------- Test -------*/
+		/* body {background-color: aquamarine;} */
+    }
